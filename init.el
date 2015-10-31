@@ -12,39 +12,6 @@
   (package-install 'use-package))
 (require 'use-package)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; evil
-(use-package evil-leader
-	     :ensure t
-	     :demand t
-	     :commands (evil-leader-mode)
-	     :init (global-evil-leader-mode)
-	     :config
-	     (progn
-	       (evil-leader/set-leader ",")
-	       ))
-
-(require 'evil-leader)
-
-(global-evil-leader-mode)
-
-(require 'evil)
-(evil-mode 1)
-
-(define-key evil-normal-state-map (kbd "C-h") 'evil-window-left)
-(define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
-(define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
-(define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
-
-(evil-leader/set-key
-  "w" 'save-buffer
-  "q" 'kill-buffer-and-window
-  "h" 'dired-jump
-  "v" 'split-window-righ
-  "," 'other-window
-  "b" 'ibuffer
-  "x" 'helm-M-x
-  )
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; elisp-slimee-nav
 
 (require 'elisp-slime-nav)
@@ -61,5 +28,7 @@
 
 ;; ========= Custom Settings
 
+(require 'my-evil)
 (require 'my-ibuffer)
 (require 'my-dired)
+(require 'my-evil-leader-keys)
