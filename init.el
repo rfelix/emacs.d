@@ -14,6 +14,7 @@
 
 ;; ========= Custom Settings
 
+(require 'my-core)
 (require 'my-evil)
 (require 'my-ibuffer)
 (require 'my-dired)
