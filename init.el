@@ -12,23 +12,10 @@
   (package-install 'use-package))
 (require 'use-package)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; elisp-slimee-nav
-
-(require 'elisp-slime-nav)
-
-(defun my-lisp-hook ()
-  (elisp-slime-nav-mode)
-  (turn-on-eldoc-mode)
-  )
-
-(add-hook 'emacs-lisp-mode-hook 'my-lisp-hook)
-
-(evil-define-key 'normal emacs-lisp-mode-map (kbd "K")
-  'elisp-slime-nav-describe-elisp-thing-at-point)
-
 ;; ========= Custom Settings
 
 (require 'my-evil)
 (require 'my-ibuffer)
 (require 'my-dired)
+(require 'my-elisp-slime-nav)
 (require 'my-evil-leader-keys)
