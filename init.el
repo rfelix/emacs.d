@@ -3,12 +3,28 @@
                          ("org" . "http://orgmode.org/elpa/")
                          ("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize)
+(setq package-enable-at-startup nil)
 
 (add-to-list 'load-path (concat user-emacs-directory "settings"))
 
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(require 'use-package)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; evil
+(use-package evil-leader
+	     :ensure t
+	     :demand t
+	     :commands (evil-leader-mode)
+	     :init (global-evil-leader-mode)
+	     :config
+	     (progn
+	       (evil-leader/set-leader ",")
+	       ))
+
 (require 'evil-leader)
-(evil-leader/set-leader ",")
+
 (global-evil-leader-mode)
 
 (require 'evil)
