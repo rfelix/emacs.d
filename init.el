@@ -6,10 +6,6 @@
 
 (add-to-list 'load-path (concat user-emacs-directory "settings"))
 
-;; ========= Custom Settings
-
-(require 'my-ibuffer)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; evil
 
 (require 'evil)
@@ -33,3 +29,8 @@
 
 (evil-define-key 'normal emacs-lisp-mode-map (kbd "K")
   'elisp-slime-nav-describe-elisp-thing-at-point)
+
+;; ========= Custom Settings
+
+(require 'my-ibuffer)
+(require 'my-dired)
