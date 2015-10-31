@@ -7,6 +7,9 @@
 (add-to-list 'load-path (concat user-emacs-directory "settings"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; evil
+(require 'evil-leader)
+(evil-leader/set-leader ",")
+(global-evil-leader-mode)
 
 (require 'evil)
 (evil-mode 1)
@@ -15,6 +18,16 @@
 (define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
 (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
 (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
+
+(evil-leader/set-key
+  "w" 'save-buffer
+  "q" 'kill-buffer-and-window
+  "h" 'dired-jump
+  "v" 'split-window-righ
+  "," 'other-window
+  "b" 'ibuffer
+  "x" 'helm-M-x
+  )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; elisp-slimee-nav
 
