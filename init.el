@@ -18,4 +18,5 @@
 (require 'my-ibuffer)
 (require 'my-dired)
 (require 'my-elisp-slime-nav)
-(require 'my-evil-leader-keys)
+(require 'my-magit)
+(require 'my-evil-leader-keys) ;; Let this come last
