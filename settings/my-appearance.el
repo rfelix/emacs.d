@@ -15,6 +15,16 @@
 ;; Highlight matching parenthesis
 ;; (show-paren-mode 1) ;; Not too sure on this one...
 
+;; Show relative line numbers except for the current line
+(global-linum-mode 1)
+(use-package linum-relative
+  :ensure t
+  :config
+  (progn
+    (setq linum-format 'linum-relative)
+    (setq linum-relative-current-symbol "")
+    (linum-relative-on)))
+
 ;; This theme works the best when using emacs from the console as long
 ;; as you're using the corresponding Solarized color preset iTerm 2
 (add-to-list 'custom-theme-load-path (concat user-emacs-directory "custom-themes/emacs-color-theme-solarized"))
