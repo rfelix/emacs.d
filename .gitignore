@@ -41,3 +41,4 @@ site-lisp/package/
 /recentf
 /viper
 /.saves
+.DS_Store

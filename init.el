@@ -28,6 +28,7 @@
 ;; ========= Custom Settings
 
 (require 'my-core)
+(require 'my-appearance)
 (require 'my-evil)
 (require 'my-ibuffer)
 (require 'my-dired)
