@@ -21,5 +21,8 @@
     (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
     (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
     ))
-  
-  
+
+(use-package evil-surround
+  :ensure t
+  :config
+  (global-evil-surround-mode 1))
