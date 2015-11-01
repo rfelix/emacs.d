@@ -6,6 +6,6 @@
   "h" 'dired-jump
   "v" 'split-window-right
   "," 'other-window
-  "b" 'ibuffer
+  "b" 'helm-buffers-list
   "x" 'helm-M-x
   )
