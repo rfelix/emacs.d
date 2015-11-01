@@ -5,9 +5,16 @@
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
 (require 'package)
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                         ("org" . "http://orgmode.org/elpa/")
-                         ("gnu" . "http://elpa.gnu.org/packages/")))
+;; Locks to specific version of packages
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+;; Based on the latest commit in master for each package
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
+;; Maintainers explicitly upload the package
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+
 (package-initialize)
 (setq package-enable-at-startup nil)
 
@@ -27,3 +34,6 @@
 (require 'my-elisp-slime-nav)
 (require 'my-magit)
 (require 'my-evil-leader-keys) ;; Let this come last
+
+;; === End of Settings
+
