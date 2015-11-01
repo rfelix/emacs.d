@@ -9,6 +9,9 @@
 ;; Display column/row of cursor
 (column-number-mode 1)
 
+;; No cursor blinking, it's distracting
+(blink-cursor-mode 0)
+
 ;; Highlight matching parenthesis
 ;; (show-paren-mode 1) ;; Not too sure on this one...
 
