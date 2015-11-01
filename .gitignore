@@ -42,3 +42,4 @@ site-lisp/package/
 /viper
 /.saves
 .DS_Store
+/savehist
