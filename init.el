@@ -32,6 +32,7 @@
 (require 'my-evil)
 (require 'my-ibuffer)
 (require 'my-dired)
+(require 'my-emacs)
 (require 'my-elisp-slime-nav)
 (require 'my-magit)
 (require 'my-evil-leader-keys) ;; Let this come last
