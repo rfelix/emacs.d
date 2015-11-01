@@ -43,3 +43,4 @@ site-lisp/package/
 /.saves
 .DS_Store
 /savehist
+/projectile-bookmarks.eld

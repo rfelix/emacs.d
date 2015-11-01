@@ -8,4 +8,6 @@
   "," 'other-window
   "b" 'helm-buffers-list
   "x" 'helm-M-x
+  "t" 'helm-projectile-find-file
+  "p" 'helm-projectile-switch-project
   )

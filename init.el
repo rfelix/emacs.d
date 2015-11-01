@@ -34,6 +34,7 @@
 (require 'my-dired)
 (require 'my-emacs)
 (require 'my-history)
+(require 'my-navigation)
 (require 'my-elisp-slime-nav)
 (require 'my-magit)
 (require 'my-evil-leader-keys) ;; Let this come last
