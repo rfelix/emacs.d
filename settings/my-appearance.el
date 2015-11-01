@@ -12,6 +12,9 @@
 ;; No cursor blinking, it's distracting
 (blink-cursor-mode 0)
 
+;; Don't truncate lines by default
+(set-default 'truncate-lines t)
+
 ;; Highlight matching parenthesis
 ;; (show-paren-mode 1) ;; Not too sure on this one...
 
