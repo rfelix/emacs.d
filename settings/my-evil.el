@@ -26,3 +26,14 @@
   :ensure t
   :config
   (global-evil-surround-mode 1))
+
+;; This basically allows assigning pairs of simultaneously pressed
+;; keys to commands, but will be used to have a quick way to exit
+;; evil's insert mode to normal mode
+(use-package key-chord
+  :ensure t
+  :config
+  (progn
+    (key-chord-mode 1)
+    (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
+    ))
