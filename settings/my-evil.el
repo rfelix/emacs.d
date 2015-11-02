@@ -37,3 +37,21 @@
     (key-chord-mode 1)
     (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
     ))
+
+;; Simulate VIM where pressing * will cause a search for the word
+;; under the cursor
+(use-package evil-search-highlight-persist
+  :ensure t
+  :config
+  (progn
+    (global-evil-search-highlight-persist t)
+    ;; Only display string whose length is greater than or equal to 3
+    (setq evil-search-highlight-string-min-len 3)
+    ))
+
+(use-package evil-visualstar
+  :ensure t
+  :config
+  (progn
+    (global-evil-visualstar-mode t)
+    ))
