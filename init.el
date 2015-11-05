@@ -37,8 +37,8 @@
 (require 'my-navigation)
 (require 'my-elisp-slime-nav)
 (require 'my-magit)
+(require 'my-lang)
 (require 'my-terminal)
 (require 'my-evil-leader-keys) ;; Let this come last
 
 ;; === End of Settings
-
