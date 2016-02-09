@@ -13,6 +13,6 @@
   :ensure t
   :config
   (progn
-    (setq projectile-completion-system 'helm)
-    (helm-projectile-on)
-    ))
+    (after 'helm
+      (setq projectile-completion-system 'helm)
+      (helm-projectile-on))))
