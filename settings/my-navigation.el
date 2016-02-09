@@ -5,6 +5,8 @@
   :ensure t
   :config
   (progn
+    ;; Allow projectile to work even in directories without a VCS repo
+    (setq projectile-require-project-root nil)
     (projectile-global-mode)
     ))
 
