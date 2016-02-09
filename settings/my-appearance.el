@@ -1,5 +1,6 @@
 (provide 'my-appearance)
 
+;; Font
 (set-face-attribute 'default
                     nil
                     :family "Source Code Pro for Powerline"
@@ -64,8 +65,8 @@ theme that works better"
 
 ;; Change cursor colors based on evil modes but using Solarized colors
 (setq evil-emacs-state-cursor '("gold3" box))
-(setq evil-normal-state-cursor '("slate blue" box))
-(setq evil-visual-state-cursor '("deep pink" box))
+(setq evil-normal-state-cursor '("white" box))
+(setq evil-visual-state-cursor '("white" box))
 (setq evil-insert-state-cursor '("DodgerBlue2" bar))
 (setq evil-replace-state-cursor '("deep pink" bar))
 (setq evil-operator-state-cursor '("deep pink" hollow))
