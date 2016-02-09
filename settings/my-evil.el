@@ -1,5 +1,8 @@
 (provide 'my-evil)
 
+;; Use Ctrl-U to scroll half a page up
+(setq evil-want-C-u-scroll t)
+
 (use-package evil-leader
   :ensure t
   :demand t
