@@ -17,8 +17,12 @@
           savehist-autosave-interval 60)
     (savehist-mode t)))
 
-;; Track recent files
-(require 'recentf)
-(recentf-mode 1)
-(setq recentf-max-menu-items 25)
-(global-set-key (kbd "C-x C-r") 'helm-recentf)
+;; Track recently opened files
+(use-package recentf
+  :config
+  (progn
+    (setq recentf-max-saved-items 1000
+          recentf-max-menu-items 25)
+    (recentf-mode 1)
+    (after 'helm
+      (global-set-key (kbd "C-x C-r") 'helm-recentf))))

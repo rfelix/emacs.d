@@ -1,22 +1,17 @@
 (provide 'my-lang-ruby)
 
 ;; Based on http://mixandgo.com/blog/how-i-ve-convinced-emacs-to-dance-with-ruby
-(require 'ruby-mode)
-
-;; Files with the following extensions should open in ruby-mode
-(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Vagrantfile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
-
-;; When folding, take these delimiters into consideration
-(add-to-list 'hs-special-modes-alist
-             '(ruby-mode
-               "\\(class\\|def\\|do\\|if\\)" "\\(end\\)" "#"
-               (lambda (arg) (ruby-end-of-block)) nil))
+(use-package ruby-mode
+  :ensure t
+  :mode (("\\.\\(?:cap\\|gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|ru\\|thor\\)\\'" . ruby-mode)
+         ("\\(?:Brewfile\\|Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\|Vagrantfile\\)\\'" . ruby-mode))
+  :config
+  (progn
+    ;; When folding, take these delimiters into consideration
+    (add-to-list 'hs-special-modes-alist
+                 '(ruby-mode
+                   "\\(class\\|def\\|do\\|if\\)" "\\(end\\)" "#"
+                   (lambda (arg) (ruby-end-of-block)) nil))))
 
 ;; Get emacs to be smart enough to run rspec tests
 (use-package rspec-mode

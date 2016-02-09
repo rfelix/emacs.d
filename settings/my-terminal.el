@@ -10,5 +10,5 @@
     (add-hook 'term-mode-hook
               (lambda ()
                 (setq term-buffer-maximum-size 10000)))
-    (add-hook 'term-mode-hook 'evil-emacs-state)
-    ))
+    (after 'evil
+      (add-hook 'term-mode-hook 'evil-emacs-state))))
