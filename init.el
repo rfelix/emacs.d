@@ -38,6 +38,7 @@
 (require 'my-magit)
 (require 'my-lang)
 (require 'my-terminal)
+(require 'my-window-manager)
 (require 'my-org-mode)
 (require 'my-evil-leader-keys) ;; Let this come last
 
