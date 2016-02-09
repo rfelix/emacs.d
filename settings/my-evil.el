@@ -66,3 +66,11 @@
   (progn
     (evil-jumper-mode)
     ))
+
+;; Support vim's matchit plugin
+(use-package evil-matchit
+  :ensure t
+  :config
+  (progn
+    (global-evil-matchit-mode 1)
+    ))
