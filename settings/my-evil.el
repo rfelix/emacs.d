@@ -58,3 +58,11 @@
   (progn
     (global-evil-visualstar-mode t)
     ))
+
+;; Simulate VIM's Ctrl+i and Ctrl+o functionality between files and buffers
+(use-package evil-jumper
+  :ensure t
+  :config
+  (progn
+    (evil-jumper-mode)
+    ))
