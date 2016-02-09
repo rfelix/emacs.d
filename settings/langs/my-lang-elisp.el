@@ -1,4 +1,4 @@
-(provide 'my-elisp-slime-nav)
+(provide 'my-lang-elisp)
 
 (use-package elisp-slime-nav
   :ensure t
